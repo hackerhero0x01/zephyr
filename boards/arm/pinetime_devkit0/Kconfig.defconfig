@@ -1,0 +1,27 @@
+# PineTime DevKit0 board configuration
+
+# Copyright (c) 2020 Stephane Dorre <stephane.dorre@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_PINETIME_DEVKIT0
+
+config BOARD
+	default "pinetime_devkit0"
+
+config BT_CTLR
+	default BT
+
+if DISPLAY
+
+config SPI
+	default y
+
+config ST7789V
+	default y
+
+endif # DISPLAY
+
+config I2C
+	default y if KSCAN
+
+endif # BOARD_PINETIME_DEVKIT0

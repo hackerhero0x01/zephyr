@@ -1,0 +1,18 @@
+# Copyright (c) 2018, Linaro Limited
+# SPDX-License-Identifier: Apache-2.0
+
+description: NXP Kinetis Ethernet
+
+compatible: "nxp,kinetis-ethernet"
+
+include: ["ethernet.yaml", "ethernet,fixed-link.yaml"]
+
+properties:
+    reg:
+      required: true
+    interrupts:
+      required: true
+    phy-addr:
+      type: int
+      description: Address of the phy controller
+      required: true
